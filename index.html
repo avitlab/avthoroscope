@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Program Horoskop [AV]</title>
+</head>
+
+<body>
+    <h1>Program Horoskop</h1>
+    <form onsubmit="return false">
+        <button id="tombol" type="submit">Click here!</button>
+    </form>
+    <p>Keberuntungan Anda hari ini:</p>
+    <h4 id="container"></h4>
+</body>
+
+<script>
+    const btn = document.querySelector("tombol");
+    addEventListener("click", horoskop);
+
+    function horoskop() {
+        const randomNumber = Date.now();
+        var hasil = document.getElementById("container");
+
+        if (randomNumber % 2 === 0) {
+            hasil.innerHTML = "Boleh juga!";
+        } else if (randomNumber % 5 === 0) {
+            hasil.innerHTML = "Hebat!";
+        } else {
+            hasil.innerHTML = "Mengerikan!";
+        }
+    }
+</script>
+
+</html>
